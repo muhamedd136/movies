@@ -1,0 +1,44 @@
+.Tab {
+  display: grid;
+  grid-gap: 50px;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .Tab {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

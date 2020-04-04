@@ -1,0 +1,72 @@
+.TitleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  // border: 1px solid #484d5c;
+  border-radius: 4px;
+
+  &:hover {
+    // background-color: black;
+    transition: ease-in-out 0.1s;
+    box-shadow: 0px 0px 15px 15px gainsboro;
+  }
+}
+
+.TitleCard-Image {
+  height: 70%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.TitleCard-Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30%;
+  width: 100%;
+  margin: 0;
+  border: none;
+  background-color: #3b8ee6;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+}
+
+// @media screen and (min-width: 375px) {
+//   .TitleCard {
+//     height: 450px;
+//     width: 270px;
+//   }
+// }
+
+// @media screen and (min-width: 425px) {
+//   .TitleCard {
+//     height: 500px;
+//     width: 300px;
+//   }
+// }
+
+// @media screen and (min-width: 425px) {
+//   .TitleCard {
+//     height: 450px;
+//     width: 270px;
+//   }
+// }
+
+// @media screen and (min-width: 425px) {
+//   .TitleCard {
+//     height: 450px;
+//     width: 270px;
+//   }
+// }

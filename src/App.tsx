@@ -1,24 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import React, { useEffect } from 'react';
-import { movies, tvshows } from './api';
-import './App.scss';
 import { Home, Details } from './pages';
+import React from 'react';
+import './App.scss';
 
 function App() {
-  // const getMovies = async () => {
-  //   await movies
-  //     .get()
-  //     .then((response) => console.log(response?.data?.results))
-  //     .catch((error) => console.log(error));
-  // };
-
-  // const getTvShows = async () => {
-  //   await tvshows
-  //     .get()
-  //     .then((response) => console.log(response.data.results))
-  //     .catch((error) => console.log(error));
-  // };
-
   // const searchMovies = async () => {
   //   await movies
   //     .search('too fast')
@@ -48,8 +33,6 @@ function App() {
   // };
 
   // useEffect(() => {
-  //   getMovies();
-  //   getTvShows();
   //   searchMovies();
   //   searchTvShows();
   //   getTvShowDetails();
@@ -61,9 +44,15 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/details' component={Details} />
+          <Route exact path='/details/:id' component={Details} />
         </Switch>
       </Router>
+      <div className='App-Foter'>
+        <span>© Muhamed Delihasanovic, 2020</span>
+        <a href='https://www.github.com/muhamedd136/movies' target='_blank'>
+          Github
+        </a>
+      </div>
     </div>
   );
 }

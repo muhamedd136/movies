@@ -1,0 +1,50 @@
+$border-width: 4px;
+
+.SwitchButtons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 50px 0px 50px;
+}
+
+.SwitchButtons .ButtonItem {
+  width: 50%;
+  background-color: gainsboro;
+  border: 1px solid gainsboro;
+  padding: 10px 24px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  transition: ease 0.3s;
+  font-weight: 600;
+
+  &:hover {
+    color: white;
+    background-color: #3b8ee6;
+  }
+
+  &:focus {
+    color: white;
+    background-color: #3b8ee6;
+  }
+
+  &:first-child {
+    border-right: none;
+    border-top-left-radius: $border-width;
+    border-bottom-left-radius: $border-width;
+  }
+
+  &:last-child {
+    border-left: none;
+    border-top-right-radius: $border-width;
+    border-bottom-right-radius: $border-width;
+  }
+}
+
+.SwitchButtons .ButtonItem:not(:last-child) {
+  border-right: none;
+}
+
+.SwitchButtons:after .ButtonItem:after {
+  content: '';
+  clear: none;
+}
