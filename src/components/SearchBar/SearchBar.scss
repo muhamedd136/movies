@@ -11,15 +11,15 @@
   background-image: 'search.png';
   background-color: #3b8ee6;
   border: 1px solid #3b8ee6;
+  justify-content: center;
   vertical-align: middle;
   white-space: nowrap;
   display: table-cell;
+  align-items: center;
   text-align: center;
   padding: 6px 12px;
-  width: 1%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 1%;
 }
 
 .SearchBar-Image {

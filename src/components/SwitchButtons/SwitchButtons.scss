@@ -1,48 +1,42 @@
 $border-width: 4px;
 
 .SwitchButtons {
-  display: flex;
-  flex-wrap: wrap;
   margin: 50px 50px 0px 50px;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .SwitchButtons .ButtonItem {
-  width: 50%;
-  // background-color: gainsboro;
   border: 1px solid gainsboro;
+  transition: ease 0.3s;
   padding: 10px 24px;
+  font-weight: 600;
+  font-weight: 600;
   cursor: pointer;
   outline: none;
-  font-weight: 600;
-  transition: ease 0.3s;
-  font-weight: 600;
+  width: 50%;
 
   &:hover {
-    color: white;
     background-color: #3b8ee6;
+    color: white;
   }
 
-  // &:focus {
-  //   color: white;
-  //   background-color: #3b8ee6;
-  // }
-
   &:first-child {
-    border-right: none;
-    border-top-left-radius: $border-width;
     border-bottom-left-radius: $border-width;
+    border-top-left-radius: $border-width;
+    border-right: none;
   }
 
   &:last-child {
-    border-left: none;
-    border-top-right-radius: $border-width;
     border-bottom-right-radius: $border-width;
+    border-top-right-radius: $border-width;
+    border-left: none;
   }
 }
 
 .Button-Active {
-  color: white;
   background-color: #3b8ee6;
+  color: white;
 }
 
 .SwitchButtons .ButtonItem:not(:last-child) {

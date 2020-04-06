@@ -1,16 +1,29 @@
+import { changeTab } from '../../redux/home/actions';
+import { connect } from 'react-redux';
 import './SwitchButtons.scss';
 import React from 'react';
 
-export const SwitchButtons = (props: any) => {
-  const { focus, handleFocus } = props;
+const SwitchButtons = ({ focusedTab, changeTab }) => {
+  // const { focus, handleFocus } = props;
   return (
     <div className='SwitchButtons'>
-      <button autoFocus onClick={() => handleFocus(1)} className={focus === 1 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
+      <button autoFocus onClick={() => changeTab(1)} className={focusedTab === 1 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
         Movies
       </button>
-      <button onClick={() => handleFocus(2)} className={focus === 2 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
+      <button onClick={() => changeTab(2)} className={focusedTab === 2 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
         TV Shows
       </button>
     </div>
   );
 };
+
+/** redux methods */
+const mapStateToProps = ({ home: { focusedTab } }) => ({
+  focusedTab,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  changeTab: (tab: number) => dispatch(changeTab(tab)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SwitchButtons);

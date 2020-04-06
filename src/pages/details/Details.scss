@@ -1,26 +1,26 @@
 .Details {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   min-height: 100vh;
   padding-top: 15px;
+  display: flex;
+  width: 100%;
 
   span {
-    font-size: 14px;
     margin-bottom: 15px;
     font-weight: 700;
+    font-size: 14px;
     color: #3b8ee6;
   }
 }
 
 .Details-Container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: space-evenly;
-  width: 70%;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
   height: 100%;
+  width: 70%;
 
   div {
     margin-bottom: 45px;
@@ -29,32 +29,32 @@
 }
 
 .Details-Video {
+  margin-bottom: 15px;
+  border-radius: 4px;
   min-height: 100%;
   min-height: 100%;
   height: 250px;
-  width: 100%;
   border: none;
-  margin-bottom: 15px;
-  border-radius: 4px;
+  width: 100%;
 }
 
 .Details-Image {
-  width: 100%;
-  height: 100%;
   margin-bottom: 15px;
   border-radius: 4px;
+  height: 100%;
   border: none;
+  width: 100%;
 }
 
 .Details-Title {
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
-  text-align: center;
 }
 
 .Details-Overview {
-  font-weight: 500;
   text-align: justify;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
