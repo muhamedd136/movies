@@ -66,7 +66,12 @@ const Details = (props: any) => {
         {isLoading ? (
           'Loading...'
         ) : titleDetails?.video?.length ? (
-          <iframe allowFullScreen height='auto' className='Details-Video' src={`${BASE_VIDEO_URL}${titleDetails.video}`}></iframe>
+          <iframe
+            title='Trailer'
+            allowFullScreen
+            height='auto'
+            className='Details-Video'
+            src={`${BASE_VIDEO_URL}${titleDetails.video}`}></iframe>
         ) : (
           <img
             className='Details-Image'
@@ -84,8 +89,9 @@ const Details = (props: any) => {
   );
 };
 
-const mapStateToProps = ({ home: { focusedTab } }) => ({
-  focusedTab,
-});
+const mapStateToProps = (state: any) => {
+  const { home } = state;
+  return { focusedTab: home.focusedTab };
+};
 
 export default connect(mapStateToProps)(withRouter(Details));

@@ -5,7 +5,9 @@ import { movies, tvshows } from '../../api';
 import { connect } from 'react-redux';
 import './Home.scss';
 
-const Home = ({ focusedTab, searchQuery, setSearchQuery, isSearching, setIsSearching }) => {
+const Home = (props: any) => {
+  const { focusedTab, searchQuery, setSearchQuery, isSearching, setIsSearching } = props;
+
   const [moviesQueryList, setMoviesQueryList] = useState([]);
   const [showQueryList, setShowQueryList] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
@@ -91,11 +93,16 @@ const Home = ({ focusedTab, searchQuery, setSearchQuery, isSearching, setIsSearc
 };
 
 /** redux methods */
-const mapStateToProps = ({ home: { focusedTab, searchQuery, isSearching } }) => ({
-  focusedTab,
-  searchQuery,
-  isSearching,
-});
+// const mapStateToProps = ({ home: { focusedTab, searchQuery, isSearching } }) => ({
+//   focusedTab,
+//   searchQuery,
+//   isSearching,
+// });
+
+const mapStateToProps = (state: any) => {
+  const { home } = state;
+  return { focusedTab: home.focusedTab, searchQuery: home.searchQuery, isSearching: home.isSearching };
+};
 
 const mapDispatchToProps = (dispatch: any) => ({
   setSearchQuery: (query: string) => dispatch(setSearchQuery(query)),

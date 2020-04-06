@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import './SwitchButtons.scss';
 import React from 'react';
 
-const SwitchButtons = ({ focusedTab, changeTab }) => {
+const SwitchButtons = (props: any) => {
   // const { focus, handleFocus } = props;
   return (
     <div className='SwitchButtons'>
-      <button autoFocus onClick={() => changeTab(1)} className={focusedTab === 1 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
+      <button autoFocus onClick={() => props.changeTab(1)} className={props.focusedTab === 1 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
         Movies
       </button>
-      <button onClick={() => changeTab(2)} className={focusedTab === 2 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
+      <button onClick={() => props.changeTab(2)} className={props.focusedTab === 2 ? 'ButtonItem Button-Active' : 'ButtonItem'}>
         TV Shows
       </button>
     </div>
@@ -18,9 +18,10 @@ const SwitchButtons = ({ focusedTab, changeTab }) => {
 };
 
 /** redux methods */
-const mapStateToProps = ({ home: { focusedTab } }) => ({
-  focusedTab,
-});
+const mapStateToProps = (state: any) => {
+  const { home } = state;
+  return { focusedTab: home.focusedTab };
+};
 
 const mapDispatchToProps = (dispatch: any) => ({
   changeTab: (tab: number) => dispatch(changeTab(tab)),
