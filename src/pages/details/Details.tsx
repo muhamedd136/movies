@@ -80,6 +80,7 @@ const Details = (props: any) => {
                 ? `${BASE_BACKDROP_URL}${titleDetails?.backdrop}`
                 : `https://znaiwifi.com/wp-content/uploads/2018/01/hqdefault.jpg`
             }
+            alt=''
           />
         )}
         <div className='Details-Title'>{titleDetails?.title || 'Title'}</div>
