@@ -3,6 +3,6 @@ import axios from 'axios';
 
 export default {
   search: (query: string) => axios.get(`${BASE_URL}/search/tv?api_key=${API_KEY}&query=${query}`),
-  getDetails: (tvId: number) => axios.get(`${BASE_URL}/tv/${tvId}?api_key=${API_KEY}`),
-  get: () => axios.get(`${BASE_URL}/tv/popular?api_key=${API_KEY}`)
+  getDetails: (tvId: number) => axios.get(`${BASE_URL}/tv/${tvId}?api_key=${API_KEY}&append_to_response=videos`),
+  get: () => axios.get(`${BASE_URL}/tv/popular?api_key=${API_KEY}`),
 };

@@ -5,13 +5,12 @@
   align-items: center;
   height: 500px;
   width: 100%;
-  // border: 1px solid #484d5c;
   border-radius: 4px;
 
   &:hover {
-    // background-color: black;
     transition: ease-in-out 0.1s;
     box-shadow: 0px 0px 15px 15px gainsboro;
+    cursor: pointer;
   }
 }
 

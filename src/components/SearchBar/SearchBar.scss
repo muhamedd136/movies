@@ -1,0 +1,43 @@
+.SearchBar {
+  border: 1px solid #3b8ee6;
+  margin: 0 0 30px 0;
+  border-radius: 4px;
+  display: flex;
+  height: 30px;
+  width: 100%;
+}
+
+.SearchBar-Icon {
+  background-image: 'search.png';
+  background-color: #3b8ee6;
+  border: 1px solid #3b8ee6;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: table-cell;
+  text-align: center;
+  padding: 6px 12px;
+  width: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchBar-Image {
+  height: 20px;
+  width: 20px;
+}
+
+.SearchBar-Input {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  display: table-cell;
+  position: relative;
+  padding: 2px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  border: none;
+  float: left;
+  width: 100%;
+  z-index: 2;
+  margin: 0;
+}

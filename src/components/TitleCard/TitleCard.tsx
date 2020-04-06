@@ -16,17 +16,21 @@ export interface TitleCardProps {
 }
 
 const TitleCard = (props: any) => {
-  const { id, name, title, poster, history } = props;
-
   const BASE_POSTER_URL = 'https://image.tmdb.org/t/p/w300';
+  const { id, name, title, poster, history } = props;
+  const tab = title ? 1 : 2;
 
   return (
     <div
       className='TitleCard'
       onClick={() => {
-        history.push(`/details/${id}`);
+        history.push(`/details?id=${id}&tab=${tab}`);
       }}>
-      <img className='TitleCard-Image' src={`${BASE_POSTER_URL}${poster}`} alt='' />
+      <img
+        className='TitleCard-Image'
+        src={poster ? `${BASE_POSTER_URL}${poster}` : `https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg`}
+        alt=''
+      />
       <div className='TitleCard-Title'>{title || name}</div>
     </div>
   );

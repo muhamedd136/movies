@@ -8,7 +8,7 @@ $border-width: 4px;
 
 .SwitchButtons .ButtonItem {
   width: 50%;
-  background-color: gainsboro;
+  // background-color: gainsboro;
   border: 1px solid gainsboro;
   padding: 10px 24px;
   cursor: pointer;
@@ -22,10 +22,10 @@ $border-width: 4px;
     background-color: #3b8ee6;
   }
 
-  &:focus {
-    color: white;
-    background-color: #3b8ee6;
-  }
+  // &:focus {
+  //   color: white;
+  //   background-color: #3b8ee6;
+  // }
 
   &:first-child {
     border-right: none;
@@ -38,6 +38,11 @@ $border-width: 4px;
     border-top-right-radius: $border-width;
     border-bottom-right-radius: $border-width;
   }
+}
+
+.Button-Active {
+  color: white;
+  background-color: #3b8ee6;
 }
 
 .SwitchButtons .ButtonItem:not(:last-child) {
