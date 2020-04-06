@@ -8,7 +8,7 @@ a search function for both and a detail view for individual items.
 When locally running the application, after cloning the repo to your pc, in command line write
 
 ```
-**npm run dev**
+npm run dev
 ```
 
 This will automatically install all modules and start the application.
